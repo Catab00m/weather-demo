@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-@RequestMapping(path = "/api")
+@RequestMapping
 public interface WeatherController {
 
     @GetMapping("/weather/{id}")

@@ -13,7 +13,9 @@ then run ```docker-compose up -d --build```<br>
 it is done through a multi-build process
 _______________________________________
 
-Service listens on port ```9090```<br>
+Service listens on port ```8181```<br>
 _______________________________________
 
-For the EDITOR role, you need to specify bearer token with a code from application.yaml file (default 0451)
+For the EDITOR role, in 'Authentication' header you need to specify bearer token with a code from application.yaml file (default 0451)
+___
+Container DB is instantiated with some test data

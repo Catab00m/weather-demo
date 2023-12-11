@@ -19,6 +19,7 @@ public class WeatherControllerImpl implements WeatherController {
 
     private final String editorPassword;
 
+
     public WeatherControllerImpl(WeatherService weatherService,
                                  @Value("${weather-demo.auth.editor_password}") String editorPassword) {
         this.weatherService = weatherService;
