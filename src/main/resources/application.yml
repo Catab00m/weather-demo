@@ -16,4 +16,4 @@ server:
 
 weather-demo:
   auth:
-    editor_password: 0451
+    editor_password: '0451'
