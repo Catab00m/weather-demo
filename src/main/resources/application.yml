@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: ENVIRONMENT
+    username: ENVIRONMENT
+    password: ENVIRONMENT
+  jpa:
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true
+    show-sql: false
+  sql:
+    init:
+      mode: always
+server:
+  port: 9090
+
+weather-demo:
+  auth:
+    editor_password: 0451

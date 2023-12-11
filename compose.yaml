@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  app:
+    image: weather-demo:latest
+    container_name: weather-demo
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresDB:5432/weatherDB
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      postgresDB:
+        condition: service_healthy
+    ports:
+      - '9090:9090'
+
+  postgresDB:
+    image: postgres:latest
+    container_name: postgresDB
+    restart: unless-stopped
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: weatherDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready --dbname=weatherDB --username=postgres --port=5432" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
