@@ -2,14 +2,9 @@ package com.andersenlab.weatherdemo.controller;
 
 import com.andersenlab.weatherdemo.exception.UnauthorizedAccessException;
 import com.andersenlab.weatherdemo.model.dto.WeatherDTO;
-import com.andersenlab.weatherdemo.model.entity.Weather;
 import com.andersenlab.weatherdemo.service.WeatherService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
